@@ -25,7 +25,7 @@ def record_user_details(email, name="Name not provided", notes="not provided"):
     return {"recorded": "ok"}
 
 def record_unknown_question(question):
-    push(f"Recording {question}")
+    push(f"I could not answer this question: {question}")
     return {"recorded": "ok"}
 
 record_user_details_json = {
