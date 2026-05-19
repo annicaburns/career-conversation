@@ -91,13 +91,13 @@ This code is in `app.py`
 
 We will deploy to HuggingFace Spaces.
 
-Check that there's no README file in your root project directory. The deploy process creates a new README file in this directory for you.
+Check that there's no README file in your project's deploy directory. The deploy process creates a new README file in this directory for you.
 
 1. Visit https://huggingface.co and set up an account  
 2. From the Avatar menu on the top right, choose Access Tokens. Choose "Create New Token". Give it WRITE permissions - it needs to have WRITE permissions! Keep a record of your new key.  
 3. In the Terminal, run: `uv tool install 'huggingface_hub[cli]'` to install the HuggingFace tool, then `hf auth login --token YOUR_TOKEN_HERE`, like `hf auth login --token hf_xxxxxx`, to login at the command line with your key. Afterwards, run `hf auth whoami` to check you're logged in  
 4. Take your new token and add it to your .env file: `HF_TOKEN=hf_xxx` for the future
-5. Run in terminal: `uv run gradio deploy` 
+5. cd into the /deploy directory and Run in terminal: `uv run gradio deploy` 
 6. Follow its instructions: name it "career_conversation", specify app.py, choose cpu-basic as the hardware, say Yes to needing to supply secrets, provide your openai api key, your pushover user and token, and say "no" to github actions.  
 
 
